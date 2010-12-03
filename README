@@ -1,0 +1,28 @@
+First You need Java 5 or 6.
+Getting Java depends on your operating system.
+for Ubuntu/Debian install sun-java6-jre package.
+
+Second you need Google App Engine SDK for Java.
+This will let you run a local server for testing your app and also nice tool for deploying it to google servers.
+Get it here http://code.google.com/appengine/downloads.html
+and unpack the archive in a convenient location on your hard drive.
+
+Add it to your path. here is mine: 
+APPENGINE_HOME=/home/oren/misc/apps/appengine-java-sdk-1.3.8
+PATH=$PATH:$APPENGINE_HOME/bin
+
+Now we can create our sinatra app.
+install jruby. the easiest way is via rvm. 
+read about rvm here if you haven't heard about it.
+after you have rvm run this:
+rvm install jruby-1.5.3
+gem install google-appengine
+
+appcfg is a utility for creating applications. let's name our app contacts
+appcfg.rb generate_app contacts
+
+dev_appsever will run our app in a local server
+dev_appserver.rb contacts
+
+point your browser to http://localhost:8080/ and hopefuly you see the text hello.
+well done! now let's upload our app to the cloud.

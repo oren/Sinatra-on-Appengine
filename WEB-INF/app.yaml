@@ -1,0 +1,3 @@
+application: contacts-oren
+version: 2
+runtime: jruby
